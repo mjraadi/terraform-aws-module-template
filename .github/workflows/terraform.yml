@@ -12,5 +12,7 @@ jobs:
   module-validation:
     uses: appvia/appvia-cicd-workflows/.github/workflows/terraform-module-validation.yml@main
     name: Module Validation
+    secrets:
+      infracost-api-key: ${{ secrets.ORG_INFRACOST_API_KEY }}
     with:
       working-directory: .
