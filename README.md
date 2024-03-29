@@ -30,7 +30,11 @@ The `terraform-docs` utility is used to generate this README. Follow the below s
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.7 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.0.0 |
+| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.24.0 |
 
 ## Providers
 
