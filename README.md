@@ -1,6 +1,6 @@
-![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Github Actions](../../workflows/terraform/badge.svg)
 
-# MODULE NAME
+# Terraform <NAME>
 
 ## Description
 
@@ -28,13 +28,14 @@ The `terraform-docs` utility is used to generate this README. Follow the below s
 3. Run `terraform-docs markdown table --output-file ${PWD}/README.md --output-mode inject .`
 
 <!-- BEGIN_TF_DOCS -->
+
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.7 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.0.0 |
-| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | >= 0.24.0 |
+| Name                                                                     | Version   |
+| ------------------------------------------------------------------------ | --------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 1.0.7  |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | >= 5.0.0  |
+| <a name="requirement_awscc"></a> [awscc](#requirement_awscc)             | >= 0.24.0 |
 
 ## Providers
 
@@ -55,5 +56,5 @@ No inputs.
 ## Outputs
 
 No outputs.
-<!-- END_TF_DOCS -->
 
+<!-- END_TF_DOCS -->
