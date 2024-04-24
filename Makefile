@@ -68,7 +68,7 @@ validate-examples:
 	@echo "--> Running terraform validate on examples"
 	@find examples -type d -mindepth 1 -maxdepth 1 | while read -r dir; do \
 		echo "--> Validating $$dir"; \
-		terraform -chdir=$$dir init; \
+		terraform -chdir=$$dir init -backend=false; \
 		terraform -chdir=$$dir validate; \
 	done
 
