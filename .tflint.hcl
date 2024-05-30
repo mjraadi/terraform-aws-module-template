@@ -67,7 +67,3 @@ rule "terraform_standard_module_structure" {
 rule "terraform_workspace_remote" {
   enabled = true
 }
-
-rule "terraform_unused_required_provider" {
-  enabled = false
-}
