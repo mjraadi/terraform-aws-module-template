@@ -12,13 +12,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-.PHONY: all security lint format documentation documentation-examples validate-all validate validate-examples init examples
+.PHONY: all security lint format documentation documentation-examples validate-all validate validate-examples init examples tests
 
 default: all
 
 all: 
 	$(MAKE) init
 	$(MAKE) validate
+	$(MAKE) tests
 	$(MAKE) lint
 	$(MAKE) security
 	$(MAKE) format
@@ -26,6 +27,7 @@ all:
 
 examples:
 	$(MAKE) validate-examples
+	$(MAKE) tests
 	$(MAKE) lint-examples
 	$(MAKE) lint
 	$(MAKE) security
@@ -77,6 +79,10 @@ security-examples:
 			trivy config  --format table --exit-code  1 --severity  CRITICAL,HIGH --ignorefile ../../.trivyignore $$dir; \
 		done; \
 	fi
+
+tests: 
+	@echo "--> Running Terraform Tests" 
+	@terraform test
 
 validate:
 	@echo "--> Running terraform validate"
