@@ -29,4 +29,5 @@ terraform.rc
 # Other
 .DS_Store
 todo.md
-
+*.orig 
+*.swp
