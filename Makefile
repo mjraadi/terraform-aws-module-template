@@ -103,6 +103,7 @@ validate:
 	@terraform validate
 	$(MAKE) validate-modules
 	$(MAKE) validate-examples
+	$(MAKE) validate-commits
 
 validate-modules:
 	@echo "--> Running terraform validate on modules"
@@ -123,6 +124,11 @@ validate-examples:
 			terraform -chdir=$$dir validate; \
 		done; \
 	fi
+
+validate-commits:
+	@echo "--> Running commitlint against the main branch"
+	@command -v commitlint >/dev/null 2>&1 || { echo "commitlint is not installed. Please install it by running 'npm install -g commitlint'"; exit 1; }
+	@git log --pretty=format:"%s" origin/main..HEAD | commitlint --from=origin/main
 
 lint:
 	@echo "--> Running tflint"
