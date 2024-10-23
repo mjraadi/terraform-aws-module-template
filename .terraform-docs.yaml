@@ -12,6 +12,15 @@ settings:
   type: true
   lockfile: false
 
+recursive:
+  enabled: true
+
+sections:
+  show:
+    - providers
+    - inputs
+    - outputs
+
 sort:
   enabled: true
   by: required
