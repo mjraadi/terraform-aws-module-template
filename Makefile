@@ -44,14 +44,14 @@ documentation-modules:
 	@echo "--> Generating documentation for modules"
 	@find . -type d -regex '.*/modules/[a-za-z\-_$$]*' -not -path '*.terraform*' 2>/dev/null | while read -r dir; do \
 		echo "--> Generating documentation for module: $$dir"; \
-		@terraform-docs $$dir; \
+		terraform-docs $$dir; \
 	done;
 
 documentation-examples:
 	@echo "--> Generating documentation for examples"
 	@find . -type d -path '*/examples/*' -not -path '*.terraform*' 2>/dev/null| while read -r dir; do \
 		echo "--> Generating documentation for example: $$dir"; \
-		@terraform-docs $$dir; \
+		terraform-docs $$dir; \
 	done;
 
 upgrade-terraform-providers:
