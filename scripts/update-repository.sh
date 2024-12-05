@@ -15,3 +15,5 @@ TEMPLATE_AWS_MODULE=${APPVIA_GITHUB}/terraform-aws-module-template
 if [[ -f ".terraform-docs.yaml" ]]; then
   rm -f .terraform-docs.yaml
 fi
+
+touch .trivyignore
