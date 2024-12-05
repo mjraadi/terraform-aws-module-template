@@ -12,8 +12,7 @@ TEMPLATE_AWS_MODULE=${APPVIA_GITHUB}/terraform-aws-module-template
 /bin/cp ${TEMPLATE_AWS_MODULE}/SECURITY.md .
 /bin/cp ${TEMPLATE_AWS_MODULE}/CODE_OF_CONDUCT.md .
 
-if [[ -f ".terraform-docs.yaml" ]]; then
-  rm -f .terraform-docs.yaml
-fi
+[[ -f .terraform-lock.hcl  ]] && rm -f .terraform-lock.hcl
+[[ -f .terraform-docs.yaml ]] && rm -f .terraform-docs.yaml
 
 touch .trivyignore
